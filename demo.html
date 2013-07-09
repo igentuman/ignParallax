@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Javascript Parallax by IGENTU</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=0.4"/>
+    <script type="text/javascript" src="res/ign-parallax-me.js"></script>
+    <style>
+        #sun {
+            -webkit-animation: sun 0.1s ease infinite alternate 0s;
+            -moz-animation: sun 0.1s ease infinite alternate 0s;
+            animation: sun 0.1s ease infinite alternate 0s;
+        }
+
+        @-webkit-keyframes sun {
+            from { }
+            to {
+                -webkit-transform: rotate(10deg);
+                -moz-transform: rotate(10deg);
+                transform: rotate(10deg);
+            }
+        }
+
+        .layer div {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: default;
+            transition-delay: 0s;
+            -webkit-transition-property: all;
+            -webkit-transition-duration: 0.5s;
+            -webkit-transition-timing-function: default;
+            -webkit-transition-delay: 0s;
+            -moz-transition-property: all;
+            -moz-transition-duration: 0.5s;
+            -moz-transition-timing-function: default;
+            -moz-transition-delay: 0s;
+        }
+        .sprite div {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: default;
+            transition-delay: 0s;
+            -webkit-transition-property: all;
+            -webkit-transition-duration: 0.5s;
+            -webkit-transition-timing-function: default;
+            -webkit-transition-delay: 0s;
+            -moz-transition-property: all;
+            -moz-transition-duration: 0.5s;
+            -moz-transition-timing-function: default;
+            -moz-transition-delay: 0s;
+        }
+        .layer-background {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div style="height:1000px;width:840px;overflow: hidden;position: absolute;">
+<div id="background" class="layer-background" style="top: -150px; left:-180px;z-index: -301; background-image:url(res/images/jungle.jpg);width: 1100px;height: 1250px;"></div>
+</div>
+<script>
+
+    ignParallaxScene.addLayer(-40,0,0,'far');
+    ignParallaxScene.addLayer(-20,0,0,'clouds');
+    ignParallaxScene.addLayer(10,0,0,'actors');
+    ignParallaxScene.addLayer(30,0,0,'grass');
+    ignParallaxScene.addLayer(40,0,0,'grass2');
+    ignParallaxScene.addLayer(45,0,0,'grass3');
+
+    ignParallaxScene.addSprite('far',200,400,'sun','sun.png',130,130);
+    ignParallaxScene.addSprite('clouds',210,460,'clouds','cloud.png',130,150);
+    ignParallaxScene.addSprite('actors',850,400,'ben','bender.png',256,200);
+    ignParallaxScene.addSprite('actors',850,600,'fry','fry.png',256,200);
+    ignParallaxScene.addSprite('grass',1050,0,'grass1','gras_2.png',70,1200);
+    ignParallaxScene.addSprite('grass2',1070,5,'grass2','gras_2.png',70,1200);
+    ignParallaxScene.addSprite('grass3',1090,-15,'grass3','gras_2.png',80,1200);
+
+    ignParallaxScene.initScene();
+</script>
+
+</body>
+</html>
